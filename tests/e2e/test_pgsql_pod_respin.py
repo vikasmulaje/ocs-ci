@@ -59,16 +59,13 @@ class TestPgSQLCephPodRespin(E2ETest):
         ],
         argvalues=[
             pytest.param(
-               *[600, 'mon'],
-                marks=pytest.mark.polarion_id("OCS-802")
+                *[600, 'mon'], marks=pytest.mark.polarion_id("OCS-802")
             ),
             pytest.param(
-                *[600, 'osd'],
-                marks=pytest.mark.polarion_id("OCS-803")
+                *[600, 'osd'], marks=pytest.mark.polarion_id("OCS-803")
             ),
             pytest.param(
-                *[600, 'mgr'],
-                marks=pytest.mark.polarion_id("OCS-804")
+                *[600, 'mgr'], marks=pytest.mark.polarion_id("OCS-804")
             ),
         ]
     )
