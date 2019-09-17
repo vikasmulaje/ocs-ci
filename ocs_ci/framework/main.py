@@ -59,6 +59,7 @@ def main(arguments):
         '-p', 'ocs_ci.framework.pytest_customization.reports',
         '--logger-logsdir', pytest_logs_dir,
     ])
-    utils.add_path_to_env_path(os.path.expanduser(
-        framework.config.RUN['bin_dir']))
+    utils.add_path_to_env_path(
+        os.path.abspath(os.path.expanduser(framework.config.RUN['bin_dir']))
+    )
     return pytest.main(arguments)
