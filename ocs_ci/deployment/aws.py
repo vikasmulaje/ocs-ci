@@ -353,7 +353,7 @@ def get_infra_id(cluster_path):
     """
     metadata_file = os.path.join(cluster_path, "metadata.json")
     with open(metadata_file) as f:
-        metadata = json.loads(f.read())
+        metadata = json.load(f)
     return metadata["infraID"]
 
 
@@ -370,7 +370,7 @@ def get_cluster_name(cluster_path):
     """
     metadata_file = os.path.join(cluster_path, "metadata.json")
     with open(metadata_file) as f:
-        metadata = json.loads(f.read())
+        metadata = json.load(f)
     return metadata["clusterName"]
 
 
